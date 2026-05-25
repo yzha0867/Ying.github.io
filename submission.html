@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Submission Form — IPI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="un-strip"><div class="un-strip-inner"><div class="left"><span class="un-emblem"></span><span>An affiliated body of the United Nations · Established 2028</span></div><div class="right"><a href="#">Accessibility</a><a href="#">Contact</a><a href="#">Member States</a></div></div></div>
+<nav class="nav"><div class="nav-inner"><a href="ipi_learning_portal.html" class="logo" style="text-decoration:none;"><div class="logo-mark"><img src="ipi_logo.png" alt="IPI"></div><div class="logo-text">International Parenting Institute<small>UN Affiliated · Geneva</small></div></a><div class="nav-links"><a href="ipi_learning_portal.html">My Learning</a><a href="courses.html">Courses</a><a href="assessment.html">Assessments</a><a href="submission.html" class="active">Documents</a><a href="about.html">About IPI</a></div><div class="nav-actions"><div class="nav-search"><span>Search courses, modules...</span></div><div class="avatar">JD</div></div></div></nav>
+
+<div class="main">
+  <div class="page-hero"><div><h1>Online submission form</h1><p class="sub">Upload required evidence for the Toddlerhood application: income document, identity document, and home observation notes. This static form is ready to open and demonstrate in a browser.</p></div><div class="hero-note"><strong>Deadline</strong><p>All files must be submitted by 18 May 2030, 6:00 PM Sydney time.</p></div></div>
+
+  <div class="submission-card">
+    <form>
+      <div class="form-grid">
+        <label>Applicant name<input value="Jane Doe" aria-label="Applicant name"></label>
+        <label>Application number<input value="IPI-PA-2030-001256" aria-label="Application number"></label>
+        <label>Course phase<select><option>Development Phase 2 — Toddlerhood</option><option>Development Phase 1 — Infancy</option><option>Development Phase 3 — Early Childhood</option></select></label>
+        <label>Assessment date<input value="20 May 2030" aria-label="Assessment date"></label>
+        <div class="upload-box full"><label>Upload income document<input type="file" accept=".pdf,.png,.jpg,.jpeg"></label><span class="meta">Accepted: PDF, PNG, JPG. Example: payslip, tax notice, benefit statement.</span></div>
+        <div class="upload-box full"><label>Upload ID document<input type="file" accept=".pdf,.png,.jpg,.jpeg"></label><span class="meta">Accepted: passport, driver licence, national ID, or approved equivalent.</span></div>
+        <div class="upload-box full"><label>Upload home observation or reflection<input type="file" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"></label><span class="meta">Attach Lab 3 reflection or signed co-applicant declaration.</span></div>
+        <label class="full">Notes for reviewer<textarea placeholder="Add any context for the IPI review officer..."></textarea></label>
+      </div>
+      <p class="notice" style="margin-top:18px;">This demonstration stores no personal documents. In a live IPI system, files would be encrypted and sent to the assessment records unit.</p>
+      <div class="form-actions"><button type="button" class="btn btn-primary">Submit documents</button><a href="assessment.html" class="btn btn-ghost">Back to schedule</a></div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

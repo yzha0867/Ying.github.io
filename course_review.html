@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Review — IPI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="un-strip"><div class="un-strip-inner"><div class="left"><span class="un-emblem"></span><span>An affiliated body of the United Nations · Established 2028</span></div><div class="right"><a href="#">Accessibility</a><a href="#">Contact</a><a href="#">Member States</a></div></div></div>
+<nav class="nav"><div class="nav-inner"><a href="ipi_learning_portal.html" class="logo" style="text-decoration:none;"><div class="logo-mark"><img src="ipi_logo.png" alt="IPI"></div><div class="logo-text">International Parenting Institute<small>UN Affiliated · Geneva</small></div></a><div class="nav-links"><a href="ipi_learning_portal.html">My Learning</a><a href="courses.html" class="active">Courses</a><a href="assessment.html">Assessments</a><a href="submission.html">Documents</a><a href="about.html">About IPI</a></div><div class="nav-actions"><div class="nav-search"><span>Search courses, modules...</span></div><div class="avatar">JD</div></div></div></nav>
+
+<div class="main">
+  <section class="course-cover">
+    <div class="course-meta"><span class="course-tag">Review mode</span><span class="course-tag tier-2" id="review-phase">Infancy · Completed</span><span class="course-code" id="review-code">IPI-IN-101</span></div>
+    <h1 id="review-title">Infant Safety, Attachment &amp; Sleep Foundations</h1>
+    <p id="review-summary">Review completed Infancy material. This phase is already passed, so content is available for reference rather than active progression.</p>
+    <div class="course-progress-wrap"><div class="course-progress"><div class="fill" id="review-fill" style="width:100%"></div></div><div class="course-progress-label" id="review-progress">100% complete · Review available</div></div>
+  </section>
+
+  <div class="detail-grid">
+    <main>
+      <section class="panel">
+        <h2>Review materials</h2>
+        <div class="module-list" id="review-modules"></div>
+      </section>
+    </main>
+    <aside>
+      <div class="card application-card"><div class="card-title">Review status</div><p id="review-status">Completed phase material<br>Certificate recorded</p><a class="btn btn-primary" href="courses.html#infancy-curriculum">Back to courses</a></div>
+    </aside>
+  </div>
+</div>
+
+<script>
+const reviewCourses = {
+  "IPI-IN-101": {
+    title: "Infant Safety, Attachment & Sleep Foundations",
+    summary: "Review safe sleep setup, secure attachment routines, soothing, and early home safety checks for 0-12 months.",
+    modules: ["Safe sleep and cot setup", "Attachment cues and responsive care", "Home safety checklist", "Scenario review quiz"]
+  },
+  "IPI-IN-120": {
+    title: "Feeding, Hygiene & Health Checks",
+    summary: "Review feeding records, hygiene routines, health-warning signs, and appointment preparation for Infancy.",
+    modules: ["Bottle and feeding hygiene", "Growth and health check records", "Recognising warning signs", "Care routine review"]
+  },
+  "IPI-IN-204": {
+    title: "Infant Emergency Response Lab",
+    summary: "Review completed practical emergency-response guidance and recorded lab outcomes.",
+    modules: ["Emergency scene safety", "Infant choking response", "Escalation and reporting", "Completed lab record"]
+  }
+};
+const params = new URLSearchParams(location.search);
+const code = params.get("course") || "IPI-IN-101";
+const course = reviewCourses[code] || reviewCourses["IPI-IN-101"];
+document.getElementById("review-code").textContent = code;
+document.getElementById("review-title").textContent = course.title;
+document.getElementById("review-summary").textContent = course.summary;
+document.getElementById("review-modules").innerHTML = course.modules.map((module, index) => `<div class="module-row"><div class="num">${index + 1}</div><div><strong>${module}</strong><span>Completed · available for review</span></div><a class="btn btn-ghost" href="#">Review</a></div>`).join("");
+</script>
+</body>
+</html>

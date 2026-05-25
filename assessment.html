@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test Cover Page and Schedule — IPI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="un-strip"><div class="un-strip-inner"><div class="left"><span class="un-emblem"></span><span>An affiliated body of the United Nations · Established 2028</span></div><div class="right"><a href="#">Accessibility</a><a href="#">Contact</a><a href="#">Member States</a></div></div></div>
+<nav class="nav"><div class="nav-inner"><a href="ipi_learning_portal.html" class="logo" style="text-decoration:none;"><div class="logo-mark"><img src="ipi_logo.png" alt="IPI"></div><div class="logo-text">International Parenting Institute<small>UN Affiliated · Geneva</small></div></a><div class="nav-links"><a href="ipi_learning_portal.html">My Learning</a><a href="courses.html">Courses</a><a href="assessment.html" class="active">Assessments</a><a href="submission.html">Documents</a><a href="about.html">About IPI</a></div><div class="nav-actions"><div class="nav-search"><span>Search courses, modules...</span></div><div class="avatar">JD</div></div></div></nav>
+
+<div class="main assessment-page">
+  <div class="page-hero"><div><h1>Assessment Centre</h1><p class="sub">Official assessment entry page for Jane Doe, application IPI-PA-2030-001256. Use this page to check the exam cover details and upcoming schedule.</p></div><div class="hero-note"><strong>Action required</strong><p>Confirm attendance by 16 May 2030 and upload supporting documents before 18 May 2030.</p><a class="btn btn-accent" href="submission.html">Upload documents</a></div></div>
+
+  <div class="content-grid">
+    <main>
+      <section class="test-cover">
+        <div class="logo-mark"><img src="ipi_logo.png" alt="IPI"></div>
+        <div class="cover-title">Toddlerhood Written Examination</div>
+        <div class="cover-grid">
+          <div class="cover-field"><span>Applicant</span>Jane Doe</div>
+          <div class="cover-field"><span>Co-applicant</span>M. Chen</div>
+          <div class="cover-field"><span>Application number</span>IPI-PA-2030-001256</div>
+          <div class="cover-field"><span>Course code</span>IPI-TD-101 · Development Phase 2</div>
+          <div class="cover-field"><span>Date and time</span>Monday, 20 May 2030 · 10:00 AM</div>
+          <div class="cover-field"><span>Location</span>IPI Centre Sydney · Room 4A</div>
+        </div>
+        <p class="notice" style="margin-top:18px;">Bring government ID, printed or digital application confirmation, and approved calculator if required. Phones and notes must remain outside the examination room.</p>
+      </section>
+
+      <section class="panel" style="margin-top:18px;">
+        <h2>Assessment schedule</h2>
+        <table class="schedule-table">
+          <thead><tr><th>Date</th><th>Assessment</th><th>Format</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>20 May 2030</td><td>Toddlerhood Written Examination</td><td>90 minutes · MCQ and short answers</td><td>Attendance pending</td></tr>
+            <tr><td>27 May 2030</td><td>Practical Test — Toddler Care</td><td>45 minutes · in-person demonstration</td><td>Scheduled</td></tr>
+            <tr><td>03 Jun 2030</td><td>Couples Interview</td><td>60 minutes · joint session</td><td>Scheduled</td></tr>
+            <tr><td>07 Jun 2030</td><td>Final Review Board</td><td>Document review</td><td>Not yet opened</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <aside><div class="card"><div class="card-title">Before the test</div><div class="goal-list" style="margin-top:16px;"><div class="goal-item" role="button" tabindex="0" aria-pressed="true"><div class="goal-check done"></div><div class="goal-content"><div class="goal-text done">Complete Module 5 reading</div></div></div><div class="goal-item" role="button" tabindex="0" aria-pressed="false"><div class="goal-check"></div><div class="goal-content"><div class="goal-text">Confirm attendance by 16 May</div></div></div><div class="goal-item" role="button" tabindex="0" aria-pressed="false"><div class="goal-check"></div><div class="goal-content"><div class="goal-text">Upload income and ID documents</div></div></div></div></div></aside>
+  </div>
+</div>
+<script>
+  document.querySelectorAll(".goal-item").forEach((item) => {
+    const toggleGoal = () => {
+      const isDone = item.getAttribute("aria-pressed") === "true";
+      item.setAttribute("aria-pressed", String(!isDone));
+      item.querySelector(".goal-check")?.classList.toggle("done", !isDone);
+      item.querySelector(".goal-text")?.classList.toggle("done", !isDone);
+    };
+
+    item.addEventListener("click", toggleGoal);
+    item.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        toggleGoal();
+      }
+    });
+  });
+</script>
+</body>
+</html>
